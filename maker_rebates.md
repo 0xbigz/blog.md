@@ -1,20 +1,21 @@
 On-chain market making dilemma
 ----
 
-Makers suffer from adverse selection since they give takers an option. The goal for makers is to try to earn enough in spreads + rebate to compensate them.
+Makers suffer from adverse selection since they give takers an option. The goal for any maker is to try to earn enough in spreads + rebate to compensate them for writing options. On-chain the speed and reliability of large specificity for a maker versus a takers simplier more binary (assuming here that maker compute (lots of bids/asks, more frequent updating) >> taker compute (single take, less frequent)). One could then argue the advantage is on the taker's side on-chain even more so than off-chain.
 
-Rather than a flat fee to try overcome a variable adverse selection cost, Drift protocol rebates makers according to their adverse selection (up to 5bps). 
+Rather than a flat fee to try overcome a variable adverse selection cost, Drift protocol rebates makers according to their adverse selection (currently capped up to 5bps). 
 Because all the trades against the vAMM are sequenced, this is reasonable to calculate.
 
 
 example
 --
-Imagine the price of SOL-PERP is 100 and a maker posts a limit sell order at 100.05. 
-If a taker takes againist the vAMM up to 100.10, if the maker did take up to their limit, then they would fill up to ~100.075 (linear approx of integrating curve from 100.10 -> 100.05).
+Imagine the price of SOL-PERP is 100 and a maker posts a large limit sell order @ 100.05. 
 
-This price improvement from taking would usually lead to a taker fee. BUT, since the maker already committed to the order before the price action, Drift can reasonably:
-1. avoid charging a taker fee
-2. fill the maker at their limit price (paying keeper)
-3. give the would-be price improvement of taking liquidity, back to the maker's collateral account as a rebate.
+Then imagine this sequence: if 1) a taker takes againist the vAMM up to 100.10 (100.00->100.10, avg price ~100.05), 2) if the "maker" user did a take againist the vAMM up to their limit, then they would fill up to ~100.075 (linear approx of integrating curve from 100.10 -> 100.05).
+
+This price improvement from taking would normally require paying a taker fee. BUT, since the maker already committed to the order before the price action occured, Drift can reasonably:
+1. drop the taker fee
+2. keeper fills the maker at their limit price (keeper could be maker running infra, in which case no keeper charge is taken/is redundant)
+3. give the would-be price improvement of taking liquidity, goes back to the maker's collateral account as a rebate.
 
 So in this example, the maker order is filled at 100.05 and recieves a rebate of ~.025 to their collateral account (the remainder after paying keeper small amount)

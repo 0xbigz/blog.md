@@ -1,7 +1,7 @@
 On-chain market making dilemma
 ----
 
-Makers suffer from adverse selection since they give takers an option. The goal for any maker is to try to earn enough in spreads + rebate to compensate them for writing options. On-chain the speed and reliability of large specificity for a maker versus a takers simplier more binary (assuming here that maker compute (lots of bids/asks, more frequent updating) >> taker compute (single take, less frequent)). One could then argue the advantage is on the taker's side on-chain even more so than off-chain.
+Makers suffer from adverse selection since they give takers an option. The goal for any maker is to try to earn enough in spreads + rebate to compensate them for writing options. On-chain the speed and reliability of specify orders for a maker is more complex versus a taker's more binary decision (assuming here that maker compute (lots of bids/asks, more frequent updating) >> taker compute (single take, less frequent)). One could then argue the advantage is on the taker's side on-chain even more so than off-chain.
 
 Rather than a flat fee to try overcome a variable adverse selection cost, Drift protocol rebates makers according to their adverse selection (currently capped up to 5bps). 
 Because all the trades against the vAMM are sequenced, this is reasonable to calculate.

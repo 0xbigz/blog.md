@@ -14,8 +14,8 @@ Imagine the price of SOL-PERP is 100 and a maker posts a large limit sell order 
 Then imagine this sequence: if 1) a taker takes againist the vAMM up to 100.10 (100.00->100.10, avg price ~100.05), 2) if the "maker" user did a take againist the vAMM up to their limit, then they would fill up to ~100.075 (linear approx of integrating curve from 100.10 -> 100.05).
 
 This price improvement from taking would normally require paying a taker fee. BUT, since the maker already committed to the order before the price action occured, Drift can reasonably:
-1. drop the taker fee
-2. keeper fills the maker at their limit price (keeper could be maker running infra, in which case no keeper charge is taken/is redundant)
-3. give the would-be price improvement of taking liquidity, goes back to the maker's collateral account as a rebate.
+1. fill maker at their the limit price and drop the taker fee 
+2. the keeper who did the fill/swap the maker at their limit price (keeper could be maker running infra, in which case no keeper charge is taken/is redundant)
+3. give the would-be price improvement of taking liquidity (swap w/o a fee) as a rebate (add to maker's collateral account)
 
 So in this example, the maker order is filled at 100.05 and recieves a rebate of ~.025 to their collateral account (the remainder after paying keeper small amount)

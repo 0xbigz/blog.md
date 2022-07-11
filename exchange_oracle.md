@@ -32,7 +32,7 @@ oracle bid = weighted sum (weight = size*stake) of price divided by total of bid
 oracle ask = weighted sum (weight = size*stake) of price divided by total of asks
 =>
 oracle price = oracle ask + bid / 2
-oracle confidence = difference between the average bid and ask price
+oracle confidence proxy = (oracle ask - oracle bid)
 ```
 
 walkthrough:

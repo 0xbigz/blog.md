@@ -46,7 +46,7 @@ walkthrough:
 also if this maker has lost SOL by canceling orders previously, LS, they can earn `min(taker_fee-rebate, LS/2) = min(1-.72, 0/2)` back with this fill
 
 * if orders are partially filled and cancelled. the stake loss only applies to the fraction of the order cancelled.
-* if a maker's reputation (`LS`) falls below a certain level, perhaps they will not be allowed to earn back
+* if a maker's bad reputation (`LS`) falls below a certain level, perhaps they will not be allowed to earn back
 
 
 observations:

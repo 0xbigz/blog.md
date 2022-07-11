@@ -42,7 +42,7 @@ oracle confidence proxy = (oracle ask - oracle bid)
 walkthrough:
 1. market maker places an order with above parameters (lets say: BUY 100 SOL-PERP @ $30, stake 1.1 SOL)
 2. if the maker cancels this order, they lose 1.1 SOL and its added to the `OP`
-3. if other trader takes it and pays a taker fee, they'll earn (`sqrt(stake)/(sqrt(X+1))`)% of the taker fee,
+3. if other trader takes it and pays a taker fee, they'll earn (`sqrt(stake)/(sqrt(X+1))`)% of the taker fee and returned stake,
 also if this maker has lost SOL by canceling orders previously, LS, they can earn `min(stake/2, LS/2)` back with this fill
 
 *if orders are partially filled and cancelled. the stake loss only applies to the fraction of the order cancelled.

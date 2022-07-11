@@ -4,7 +4,7 @@ oracles
 oracle networks create a common good, readable on-chain data. however, its hard to imagine publishing this data for free as being self sufficient in the long run.
 
 
-presumably, the best oracle is the mid-point of a deeply liquid spot market. thus if the financial incentive to manipulate this spot market is higher than the derivative that relies upon, it breaks down. additionally, a spot market also doesn't really work for any abstract information, like a prediction market.
+presumably, the best oracle is the mid-point of a deeply liquid spot market. deeply liquid spot is expensive to create, especially if its a token from another chain (think BNB on solana). also, if the financial incentive to manipulate this spot market is higher than the derivative that it relies upon, it can break down. additionally, a spot market also doesn't really work for any abstract non tokenized information, like a prediction market.
 
 
 another route is to make things not NEED oracles and be oracle-less for derivitive markets. a futures markets doesn't *need* an oracle price if its physically settled at expiry. but an oracle can help reduce the incentive for wicks to hunt out a user's liquidation/stop price. perps markets and/or cash settled need some reference price still.

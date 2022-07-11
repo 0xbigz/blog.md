@@ -31,7 +31,7 @@ LS = a maker's total loss in staking
 oracle bid = weighted sum (weight = size*stake) of price divided by total of bids
 oracle ask = weighted sum (weight = size*stake) of price divided by total of asks
 =>
-oracle price = oracle ask + bid / 2
+oracle price = (oracle ask + oracle bid) / 2
 oracle confidence proxy = (oracle ask - oracle bid)
 ```
 

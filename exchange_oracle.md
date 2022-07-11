@@ -13,7 +13,11 @@ another route is to make things not NEED oracles and be oracle-less for deriviti
 derivative exchange based oracle
 ----
 
-the exchange relies on the oracle, so why not take advantage of the work being done on an exchange to build an oracle network?
+TLDR: maker orders stake SOL to earn a larger fraction of taker fees if filled or lose the stake if cancelled. they can reclaim the amount lost in a stake by successfully filling later on
+
+
+the exchange relies on the oracle, so why not take advantage of the work by market makers being done on an exchange to build an oracle network? to avoid it from being too circular, a few distinctions need to be made.
+
 
 terms:
 ```
@@ -40,6 +44,9 @@ walkthrough:
 2. if the maker cancels this order, they lose 1.1 SOL and its added to the `OP`
 3. if other trader takes it and pays a taker fee, they'll earn (`sqrt(stake)/(sqrt(X+1))`)% of the taker fee,
 also if this maker has lost SOL by canceling orders previously, LS, they can earn `min(stake/2, LS/2)` back with this fill
+
+*if orders are partially filled and cancelled. the stake loss only applies to the fraction of the order cancelled.
+
 
 observations:
 - this system encourages makers who are confident in their orders being filled to stake and earn a maker rebate. 

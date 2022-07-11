@@ -42,14 +42,17 @@ walkthrough:
 also if this maker has lost SOL by canceling orders previously, LS, they can earn `min(stake/2, LS/2)` back with this fill
 
 observations:
-- this system encourages makers who are confident in their orders being filled to stake and earn a rebate. 
+- this system encourages makers who are confident in their orders being filled to stake and earn a maker rebate. 
 - even if a maker wash trades themselves to collect their stake, the exchange took portion of their funds to discourage it.
-- a large X is still encouraged with the sqrt in the reward function
+- a sufficiently large X is still encouraged with the sqrt in the reward function
 - the oracle pool can be used to both punish and return the SOL staked in orders that were cancelled back to makers for successfully filling later
-- the oracle pool reward can never give a user a profit
+- the oracle pool reward can never give a user a profit or even ALL of the losses back (can only approach zero)
+- the maker is incentivized to "earn it back" if they cancel and lose, so as to not be overly cautious with staked orders if prices move naturally
+- if no orders are staked, oracle can be stale at last staked order price
 
-
-
+information leak:
+- if orders staked are only/more on one side (bids), makers could be less confident that asks will get filled. this leads to prices expected to go lower in the future
+- normally makers quoting like this leads to negative funding rates (to encourage more buying from takers)
 
 
 

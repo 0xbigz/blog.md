@@ -43,7 +43,7 @@ walkthrough:
 1. market maker places an order with above parameters (lets say: BUY 100 SOL-PERP @ $30, stake $1.1)
 2. if the maker cancels this order, they lose $1.1 and its added to the `OP`, `LS +=1.1`
 3. if other trader takes it and pays a `taker_fee=$1`, they'll earn a fraction (`rebate = sqrt(stake)/(sqrt(X+1)) = sqrt(1.1)/sqrt(2.1) = .72`) of the `taker_fee` and have their stake returned,
-also if this maker has lost SOL by canceling orders previously, LS, they can earn `min(taker_fee-rebate, LS/2) = min(1-.72, 0/2)` back with this fill
+also if this maker has lost by canceling staked orders previously, LS, they can earn `min(taker_fee-rebate, LS/2) = min(1-.72, 0/2)` back with this fill
 
 * if orders are partially filled and cancelled. the stake loss only applies to the fraction of the order cancelled.
 * if a maker's bad reputation (`LS`) falls below a certain level, perhaps they will not be allowed to earn back

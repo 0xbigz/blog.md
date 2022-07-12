@@ -18,6 +18,8 @@ TLDR: maker orders stake to earn a larger fraction of taker fees if filled or lo
 
 the exchange relies on the oracle, so why not take advantage of the work by market makers being done on an exchange to build an oracle network? to avoid it from being too circular, a few distinctions need to be made.
 
+active market makers DO a lot of work on exchanges. volume over a lookback window
+
 
 terms:
 ```
@@ -31,6 +33,8 @@ order = {
 X = total SOL staked on sitting orders
 OP = oracle pool, lost staked amount
 LS = a maker's total loss in staking
+
+REP = a maker's reputation (some function of 24h volume maker volume, percentage of orders filled)
 
 oracle bid = weighted sum (weight = size*stake) of price divided by total of bids
 oracle ask = weighted sum (weight = size*stake) of price divided by total of asks

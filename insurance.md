@@ -1,3 +1,6 @@
+INSURANCE FUND PRIMER
+---
+
 insurance funds (IF) are key way to avoid a social loss (pay off the debt) or inflation (make more debt!) event 
 
 in defi protocol's:
@@ -28,7 +31,7 @@ notice defi differs from real world:
 - an overcollateralized user in the defi protocol bares the burden of bad debt
 
 
-COMMON STRATEGIES:
+COMMON DEFI FUND STRATEGIES:
 ----
 IDO??:
 a strategy is the sale of the token to hold the quote currency in the insurance fund.
@@ -44,10 +47,10 @@ however when a tail event hits this leads to cascading price event similar to th
 
 
 
-no-IF:
+no-IF (:
 ----
 
-Insurance funds just sit there, collect rent, and cant negogiate. so lets get rid of them!
+Insurance funds just collect rent, sit there waiting for bad stuff to happen, and cant negogiate. so lets get rid of them!
 
 Introducing no-if:
 - users with high leverage contineously pay users with low leverage

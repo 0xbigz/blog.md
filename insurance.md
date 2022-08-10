@@ -52,11 +52,14 @@ Insurance funds just sit there, collect rent, and cant negogiate. so lets get ri
 Introducing no-if:
 - users with high leverage contineously pay users with low leverage
 - users with the lowest leverage are basically staked
-- when theres bad debt, its a social loss event and every pays equal share (pro-rata the capital allocated to their position)
+- when theres bad debt, its a social loss event and every pays equal share (either pro-rata the capital allocated to their position or the base size of their position)
+
 
 notes:
-- "contineously pay" should also not be unix_timestamp/slot based, but volatility based. (vol is time)
+- "contineously pay" should also not be unix_timestamp/slot based, but more volatility based. (vol is time)
 - the rate the users pay and recieve should be based on current leverage distribution: highest for high leverage, lowest for low leverage
+- two users with the same position, one with higher leverage one with lower leverage have different payoffs
+- the following is very difficult to pull off in cross margin system, its an open problem to calculate online the user's leverage within one market
 
 shape of -x^3 as fund flow distribution, where x=z-score of user leverage and y=rate
 ![image](https://user-images.githubusercontent.com/83473873/183895658-6aa3da26-0808-4c20-8cb0-5ab0d8c6d17f.png)

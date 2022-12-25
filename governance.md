@@ -1,18 +1,23 @@
 overview
 ---
-unless a protocol wants to be an immutable public utility, it will require some form of governance. given the overhead and friction of governance, most teams building a protocol iterate the design and find some product market fit first before any governance. once a protocol is established, governance is a way to divvy up the revenue and continue maintaining and adjusting the protocol. 
+Unless a protocol wants to be an immutable public utility, it will require some form of governance. Given the overhead and friction of decentalized governance, most teams building a protocol iterate the design and find some product market fit first before any governance. Once a protocol has established, governance is a way to continue maintaining and adjusting the protocol in a decentralized manner. Maintaining can involve 1) divvy up revenue for contributors 2) fixing bugs and enhancing features the protocol offers.
 
-to move beyond a social club, governance for a protocol usually involves a big monetary. candidly speaking, the bigger the monetary pot, the more interested someone will be in participating in governance.
+To move beyond a social club, governance for a protocol usually involves some currency management. Candidly speaking, the bigger the currency pot to be governed, the more likely someone new would be interested in contributing to the protocol and thus participating in governance. Any governing/political structures stem from resource management and people are naturally drawn to any realtive resource surplus.
 
 problems to solve
 ---
-on-chain governance suffers from many issues:
+current on-chain governance suffers from many issues:
 
-1) either it is a loose veil for the original team to maintain full control or it is . the goal is to find a middle ground, where the original "founding fathers" can set a good direction and are investing in the mission while other good intention key leaders can emerge. 
+1) Either it is a loose veil for the original team to maintain full control or it is a gridlocked mess. Both are suspetible to hacks (including unintended hostile takeovers).
 2) low participation rates among those with small influence
 ...
 
-some philsophies in governance include: governance minimization
+A noble goal is to find a middle ground, where the original "founding fathers" can set a good direction/vision and are invested in the mission while other good intention key leaders can emerge. Active contributors who do helpful work are rewarded, while mercenaries and vultures aren't.
+
+philsophies:
+--
+some philsophies in governance include: 
+- governance minimization
 
 solutions
 ---
@@ -33,7 +38,7 @@ initiation
 
 explusion
 - users below a certain threshold of participation can be slashed
-- after certain number are removed from governance as well
+- after certain amount of low participation are slashed/removed from governance as well
 
 proposals
 - anyone can propose with a stake
@@ -44,8 +49,8 @@ proposals
 
 opt in delegacy 
 - (opt into representative democracy!), user can set (delegate authority, and optional expiry ts)
-- once expiry ts is set, cannot revoke until that date (unless delegate absolves them of this lockup or they burn 50%) 
+- once expiry ts is set, cannot revoke until that date (unless delegate absolves them of this lockup or doesnt participate, or original user burns 50% to expidite) 
 - goal of this is to show neutrality / signal [0]
 
 [0] - https://jumpcrypto.com/token-delegation-with-lockups/
-
+[1] - https://www.reverie.ooo/post/experiments-in-dao-governance

@@ -55,6 +55,7 @@ high level notes:
 ### factions
 - user can opt to join a faction (F_A, F_B) or create a new faction (F_C)
 - each faction gets to elect up to two senators
+- leaving factions for being member < X seconds old requires exit tax
 
 ### proposals
 - anyone can propose with a stake of X

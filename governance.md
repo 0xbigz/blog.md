@@ -55,6 +55,7 @@ high level notes:
 ### factions
 - user can opt to join a faction (F_A, F_B) or create a new faction (F_C)
 - each faction gets to elect up to two senators
+- each faction has X% the treasury at start of quarter as budget (inspired by "sortition" [4])
 - leaving factions for being member < X seconds old requires exit tax
 
 ### proposals
@@ -62,11 +63,13 @@ high level notes:
 - during the filibuster process, the proposal is discussed and cannot be voted on. other users must stake to reaffirm / expedite it for voting
 - proposals require quorm to pass
   - quorm is a function of number of members AND percentage
+  - if the proposal is 'faction only', it only requires members of the faction
   - yay, ney, and abstain are allowed (and doing so is considered participation)
 - voting costs 'voting power' and a "sliver" of stake
 - to vote in certain proposals may require protocol's user account to have certain stat (e.g. insurance fund stake)
 - if proposal doesnt pass, stakers lose a portion (but users voting the "losing side" of proposal can reclaim their sliver of stake)
-- a majority of senators must approve to execute (elected senators are defaulted to auto approve, unless they override)
+- a majority of senators must approve to execute (elected senators are defaulted to auto approve )
+  - senators in other factions can veto faction-only proposals
 
 ### opt-in delegacy 
 - (opt into representative democracy!), user can set (delegate authority, and optional expiry ts)
@@ -160,3 +163,5 @@ fn update_program
 [2] - https://jumpcrypto.com/token-design-for-serious-people/
 
 [3] - https://a16zcrypto.com/regulate-web3-apps-not-protocols-part-iii-the-web3-dao-dilemma/
+
+[4] - https://ethresear.ch/t/quadratic-voting-with-sortition/6065

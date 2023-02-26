@@ -7,7 +7,7 @@ overview
 ---
 Unless a protocol wants to be an immutable public utility, it will require some form of governance. Given the overhead and friction of decentalized governance, most teams building a protocol iterate the design and find some product market fit first before any governance. Once a protocol has established, governance is a way to continue maintaining and adjusting the protocol in a decentralized manner. Maintaining can involve 1) divvy up revenue for contributors 2) fixing bugs and enhancing features the protocol offers.
 
-To move beyond a social club, governance for a protocol usually involves some currency management. Candidly speaking, the bigger the currency pot to be governed, the more likely someone new would be interested in contributing to the protocol and thus participating in governance. Any governing/political structures stem from resource management and people are naturally drawn to any realtive resource surplus.
+To move beyond a social club, governance for a protocol usually involves some currency management. Candidly speaking, the bigger the currency pot to be governed, the more likely someone new would be interested in contributing to the protocol and thus participating in governance. Any governing/political structures stem from resource management and people are naturally drawn to any relative resource surplus.
 
 problems to solve
 ---
@@ -29,8 +29,6 @@ some philsophies in governance include:
 - civic duty: 
   - > "Ask not what your country can do for you; ask what you can do for your country."
   - expecting civic duty in defi governance is challenging due to the prevailing culture of anonymity and hyper-capitalism, which prioritize financial gains over personal pride and community responsibility.
-
-
 
 
 solutions

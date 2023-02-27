@@ -44,9 +44,10 @@ high level notes:
 - all DAO member net positive rewards are 'voluntary' (an individual has to opt in to claim any net rewards accrued)
 
 ### initiation
-- must stake and wait to be let in
-- existing members can expedite with a majority vote
-- existing members can block by burning amount equal to stake (double burn)
+- prospective member must stake to enter intiation queue
+- member who has waited queue period (X days) can join DAO as a member
+  - after X/4 days, existing members can expedite a prospective member's queue time with a majority member or senate vote
+  - after X/4 days, existing members can block with a majority or tie member or senate vote AND by burning amount equal to stake (double burn)
 
 ### explusion
 - users below a certain threshold of participation can be slashed
@@ -54,13 +55,13 @@ high level notes:
 
 ### factions
 - user can opt to join a faction (F_A, F_B) or create a new faction (F_C)
-- each faction gets to elect up to two senators
+- each faction gets to elect up to two senators (senators hold "veto power" or "council seats" for the governance)
 - each faction has X% the treasury at start of quarter as budget (inspired by "sortition" [4])
-- leaving factions for being member < X seconds old requires exit tax
+- leaving factions for being member < X days old requires exit tax
 
 ### proposals
-- anyone can propose with a stake of X
-- during the filibuster process, the proposal is discussed and cannot be voted on. other users must stake to reaffirm / expedite it for voting
+- anyone can submit a proposal, with an optional stake of X
+- during the filibuster process (Z days), the proposal is discussed and cannot be voted on. other users must stake to N-X, to reaffirm / expedite it for voting
 - proposals require quorm to pass
   - quorm is a function of number of members AND percentage
   - if the proposal is 'faction only', it only requires members of the faction
@@ -77,12 +78,13 @@ high level notes:
 - goal of this is to show neutrality / signal [0]
 
 ### taxation
-- all users are taxed by governance
+- DAO will periodically taxes its members in the native token they have staked
+- members, with above average token amounts staked, are taxed by governance
     - already a small consumption tax in proposing/voting 
-    - wealth percentage cost. larger stakes should pay moderately higher % than lower stakers
-- all factions are taxed by governance
-    - if there are more than two factions, the fixed cost is the max of X% of total stakes or Y% the amount of the smallest faction (where X < Y)
-    - factions can determine how to collect/pay. factions that fill vault w/ taxes owed pay the rest pro rata across members.
+    - simple flat percentage
+- every faction is also taxed by governance
+    - if there are more than two factions, the fixed cost is the `max(X% of total stakes, Y% the amount of the smallest faction)`. Note that should be case that X < Y.
+    - factions can determine how they collect/pay this tax by placing funds in their vault. remaining funds not in faction's vault, is charged pro rata across its members.
 - taxes can be redistribute based on reputation / peer review
 
 ### compliance
